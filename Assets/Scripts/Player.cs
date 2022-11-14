@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     public Image PlayerCountdown;
     float insideTimer = -1f;
     public Image insideCountDown;
+    public Inventory inventory;
 
 
     // с помощью void вводится новый контейнер 
@@ -148,6 +149,7 @@ public class Player : MonoBehaviour
         {
             Destroy(collision.gameObject);
             key = true;
+            inventory.Add_key();
         }
         if(collision.gameObject.tag == "Door"){//разрешение телепортации
             if (collision.gameObject.GetComponent<Door>().isOpen && canTP)
@@ -167,7 +169,8 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Heart")//игрок входит в коллайдер сердца
         {
             Destroy(collision.gameObject);//сердце уничтожается
-            RecountHp(1);//к текущему хп игрока прибавляется 1.
+            //RecountHp(1);//к текущему хп игрока прибавляется 1.
+            inventory.Add_hp();
         }
         if (collision.gameObject.tag == "Mushroom")//Уничтожение гриба, при контакте с игроком
         {
@@ -177,12 +180,14 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "BlueGem")
         {
             Destroy(collision.gameObject);
-            StartCoroutine(NoHit());
+            //StartCoroutine(NoHit());
+            inventory.Add_bg();
         }
         if (collision.gameObject.tag == "GreenGem")
         {
             Destroy(collision.gameObject);
-            StartCoroutine(SpeedBonus());
+            //StartCoroutine(SpeedBonus());
+            inventory.Add_gg();
         }
 
         if (collision.gameObject.tag == "TimerButtonStart")//Начинается отсчет
@@ -352,5 +357,14 @@ public class Player : MonoBehaviour
     public int GetHP()
     {
         return curHp;
+    }
+
+    public void BlueGem()
+    {
+        StartCoroutine(NoHit());
+    }
+    public void GreenGem()
+    {
+        StartCoroutine(SpeedBonus());
     }
 }

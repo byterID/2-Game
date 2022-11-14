@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 7653270637119124465}
-  shoot: {fileID: 0}
+  shoot: {fileID: 109019836699123784, guid: 0198f4c17fec1f1449b249821d0d51c0, type: 3}
   timeShoot: 4
 --- !u!114 &1654698665170557131
 MonoBehaviour:

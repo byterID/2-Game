@@ -15,7 +15,7 @@ public class UIControl : MonoBehaviour
     public TimeWork timeWork;
     public float countdown;
     //свое
-    public GameObject LVLChose, Main;
+    public GameObject LVLChose, Main, Shop;
 
     void Start()//А вот это я добавил, потому что при рестарте сцены каким то боком остаются настройки, замораживающие сцену. Теперь при старте сцены, на ней сразу будет установлена нормальная скорость времени.
     {
@@ -119,6 +119,12 @@ public class UIControl : MonoBehaviour
     {
         LVLChose.SetActive(false);//выключает уровни
         Main.SetActive(true);//включает меню
+        Shop.SetActive(false);
+    }
+    public void ClickShop()
+    {
+        Main.SetActive(false);
+        Shop.SetActive(true);
     }
 }
 
