@@ -14,6 +14,7 @@ public class UIControl : MonoBehaviour
     public Text timeText;
     public TimeWork timeWork;
     public float countdown;
+    public GameObject inventoryPan;
     //свое
     public GameObject LVLChose, Main, Shop;
 
@@ -91,16 +92,17 @@ public class UIControl : MonoBehaviour
             PlayerPrefs.SetInt("coins", PlayerPrefs.GetInt("coins") + player.GetCoins());//складываю их с теми, что уже есть
         else
             PlayerPrefs.SetInt("coins", player.GetCoins());//если монеток до этого не было, то просто начисл€ю их
-    }
-    public void Lose()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        inventoryPan.SetActive(false);
+        GetComponent<Inventory>().RecountItems();
     }
     public void Losee()//при пройгрыше вызываетс€ менюшка
     {
         Time.timeScale = 0f;//в ней врем€ замораживаетс€
         player.enabled = false;//скрипт игрока вырубаетс€
         LoseScreen.SetActive(true);//включаю экран смерти муахахах
+        inventoryPan.SetActive(false);//скрываю панель с бонусами
+        GetComponent<Inventory>().RecountItems();//вызываю компонент
     }
     public void MenuLVL()//ну а это уже на кнопку в самом меню пройгрыша
     {

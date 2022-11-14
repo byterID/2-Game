@@ -110,7 +110,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8393416665541148781}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 28.474, y: 12.462, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -229,6 +229,8 @@ MonoBehaviour:
   blueGem: {fileID: 8393416666723859227}
   greenGem: {fileID: 8393416665376303011}
   PlayerCountdown: {fileID: 0}
+  insideCountDown: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!95 &8393416665541148779
 Animator:
   serializedVersion: 3

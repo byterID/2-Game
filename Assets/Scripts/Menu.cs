@@ -20,7 +20,7 @@ public class Menu : MonoBehaviour
                     lvls[i].interactable = false;//а тут включение/выключение кнопок, если я ещё не прошел нужную сцену
             }
 
-        if (PlayerPrefs.HasKey("hp"))
+        if (PlayerPrefs.HasKey("hp"))//беру сохраненные значения
             PlayerPrefs.SetInt("hp", 0);
         if (PlayerPrefs.HasKey("bg"))
             PlayerPrefs.SetInt("bg", 0);
@@ -40,7 +40,7 @@ public class Menu : MonoBehaviour
         PlayerPrefs.DeleteAll();
     }
 
-    public void Buy_hp(int cost)
+    public void Buy_hp(int cost)//при нажатии на нужную кнопку вычтется сумма монеток и в игре персонажу будут даны соответствующие бонусы
     {
         if(PlayerPrefs.GetInt("coins") >= cost)
         {

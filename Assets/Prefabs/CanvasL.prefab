@@ -100,16 +100,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374325477}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3044596927220737880}
-  m_RootOrder: 13
+  m_Father: {fileID: 5081950581412845527}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 412.53, y: -184.9}
+  m_AnchoredPosition: {x: -128.9002, y: 0.4700775}
   m_SizeDelta: {x: 80.2448, y: 80.2448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &374325480
@@ -401,17 +401,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026375940}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 969318556}
-  m_Father: {fileID: 3044596927220737880}
-  m_RootOrder: 10
+  m_Father: {fileID: 5081950581412845527}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 412.53, y: 79.2}
+  m_AnchoredPosition: {x: 135.19989, y: 0.46991348}
   m_SizeDelta: {x: 80.2448, y: 80.2448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1026375943
@@ -609,17 +609,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541256627}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 95683983}
-  m_Father: {fileID: 3044596927220737880}
-  m_RootOrder: 12
+  m_Father: {fileID: 5081950581412845527}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 412.53, y: -95.3}
+  m_AnchoredPosition: {x: -39.30011, y: 0.46995544}
   m_SizeDelta: {x: 80.2448, y: 80.2448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1541256630
@@ -750,7 +750,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0015259, y: 112.7}
+  m_AnchoredPosition: {x: 0.0015259, y: 152.73}
   m_SizeDelta: {x: 199.0481, y: 72.3389}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1574408235
@@ -821,17 +821,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944443517}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 505111775}
-  m_Father: {fileID: 3044596927220737880}
-  m_RootOrder: 11
+  m_Father: {fileID: 5081950581412845527}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 412.53, y: -8.3}
+  m_AnchoredPosition: {x: 47.69989, y: 0.46993637}
   m_SizeDelta: {x: 80.2448, y: 80.2448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1944443520
@@ -1198,8 +1198,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124.1, y: 0.90472}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -100, y: -0.0000047684}
+  m_SizeDelta: {x: 80.053, y: 80.053}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3044596926491310964
 CanvasRenderer:
@@ -1359,7 +1359,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3044596927220737883}
         m_TargetAssemblyTypeName: UIControl, Assembly-CSharp
         m_MethodName: MenuLVL
         m_Mode: 1
@@ -1406,7 +1406,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -338, y: 218.31}
+  m_AnchoredPosition: {x: -524, y: 263.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3044596926892409036
@@ -1481,8 +1481,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.00013113, y: -0.00016165}
+  m_SizeDelta: {x: 82.743, y: 82.743}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3044596927193735925
 CanvasRenderer:
@@ -1559,7 +1559,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0015335, y: -53}
+  m_AnchoredPosition: {x: -0.90343, y: -63.263}
   m_SizeDelta: {x: 354.4694, y: 89.1587}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3044596927198718399
@@ -1641,10 +1641,6 @@ RectTransform:
   - {fileID: 598751620}
   - {fileID: 1218423457}
   - {fileID: 5081950581412845527}
-  - {fileID: 1026375941}
-  - {fileID: 1944443518}
-  - {fileID: 1541256628}
-  - {fileID: 374325478}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1740,8 +1736,10 @@ MonoBehaviour:
   timeText: {fileID: 1574408234}
   timeWork: 0
   countdown: 0
+  inventoryPan: {fileID: 0}
   LVLChose: {fileID: 0}
   Main: {fileID: 0}
+  Shop: {fileID: 0}
 --- !u!1 &3044596927271109049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,7 +1860,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3044596927220737883}
         m_TargetAssemblyTypeName: UIControl, Assembly-CSharp
         m_MethodName: NextLVL
         m_Mode: 1
@@ -2066,8 +2064,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 121, y: 0.0000041127}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 103.0641, y: 0.0000085831}
+  m_SizeDelta: {x: 80.053, y: 80.053}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3044596927679192620
 CanvasRenderer:
@@ -2141,8 +2139,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.90478}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 6.2, y: 0.0000061989}
+  m_SizeDelta: {x: 80.053, y: 80.053}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3044596927694302418
 CanvasRenderer:
@@ -2295,8 +2293,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -69.47351, y: -69.28754}
-  m_SizeDelta: {x: 94.6911, y: 94.6911}
+  m_AnchoredPosition: {x: -81.751, y: -66.471}
+  m_SizeDelta: {x: 82.7432, y: 82.743}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3044596928082496254
 CanvasRenderer:
@@ -2512,7 +2510,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3044596927220737883}
         m_TargetAssemblyTypeName: UIControl, Assembly-CSharp
         m_MethodName: ReloadLevel
         m_Mode: 1
@@ -2763,13 +2761,17 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1026375941}
+  - {fileID: 1944443518}
+  - {fileID: 1541256628}
+  - {fileID: 374325478}
   m_Father: {fileID: 3044596927220737880}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 413, y: -56}
+  m_AnchoredPosition: {x: 573.47, y: -97.100006}
   m_SizeDelta: {x: 358.7439, y: 92.5182}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &20814864178646942
