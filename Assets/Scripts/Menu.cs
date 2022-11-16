@@ -7,6 +7,8 @@ public class Menu : MonoBehaviour
 {
     public Button[] lvls;
     public Text coinText;
+    public Slider musicSlider, soundSlider;//Ввожу слайдеры, чтобы брать их значения
+    public Text musicText, soundText;//Тут будет отображаться уровень звука
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +28,23 @@ public class Menu : MonoBehaviour
             PlayerPrefs.SetInt("bg", 0);
         if (PlayerPrefs.HasKey("gg"))
             PlayerPrefs.SetInt("gg", 0);
+
+        if (!PlayerPrefs.HasKey("MusicVolume"))//создаю новые ключи для сохранения
+            PlayerPrefs.SetInt("MusicVolume", 3);
+        if (!PlayerPrefs.HasKey("SoundVolume"))
+            PlayerPrefs.SetInt("SoundVolume", 7);
+
+        musicSlider.value = PlayerPrefs.GetInt("MusicVolume");//сохраняю их значения
+        soundSlider.value = PlayerPrefs.GetInt("SoundVolume");
     }
 
     void Update()
     {
+        PlayerPrefs.SetInt("MusicVolume", (int)musicSlider.value);//Обновляю значение сохраненной переменной, беря значение со слайдера
+        PlayerPrefs.SetInt("SoundVolume", (int)soundSlider.value);
+        musicText.text = musicSlider.value.ToString();//Переписываю значение текста на новые
+        soundText.text = soundSlider.value.ToString();
+
         if (PlayerPrefs.HasKey("coins"))//а вот и вывод самих монеток на главное меню
             coinText.text = PlayerPrefs.GetInt("coins").ToString();
         else

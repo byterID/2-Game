@@ -29,6 +29,9 @@ public class Player : MonoBehaviour
     float insideTimer = -1f;
     public Image insideCountDown;
     public Inventory inventory;
+    public SoundEffector soundEffector;
+
+    public Joystick joystick;
 
 
     // с помощью void вводится новый контейнер 
@@ -46,13 +49,13 @@ public class Player : MonoBehaviour
         {
             anim.SetInteger("State", 4);
             isGrounded = true;
-            if (Input.GetAxis("Horizontal") != 0)
+            if (joystick.Horizontal >= 0.3f || joystick.Horizontal >= -0.3f)
                 Flip();
         }
         else
         {
         CheckGround();
-        if (Input.GetAxis("Horizontal") == 0 && ( isGrounded) && !isClimbing){
+        if (joystick.Horizontal < 0.3f && joystick.Horizontal > -0.3f && ( isGrounded) && !isClimbing){
             anim.SetInteger("State",1); 
         }
         else {
@@ -77,16 +80,29 @@ public class Player : MonoBehaviour
 
     void FixedUpdate() //контейнер чтобы персонаж мог прыгать
     {
-        rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.velocity.y);
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        if (joystick.Horizontal >= 0.2f)//если стик отклоняется вправо, то персонаж идет вправо
+            rb.velocity = new Vector2(speed, rb.velocity.y);
+        else if (joystick.Horizontal <= -0.2f)//так же влево
+            rb.velocity = new Vector2(-speed, rb.velocity.y);
+        else
+            rb.velocity = new Vector2(0f, rb.velocity.y);//и если ввода нету то стоит на месте
+    }
+
+    public void Jump()//переделанный прыжок, его я положил на отдельную кнопку
+    {
+        if (isGrounded)
+        {
             rb.AddForce(transform.up * jumpHeight, ForceMode2D.Impulse);
+            soundEffector.PlayJumpSound();
+        }
+        
     }
 
     void Flip() //нужен для поворота персонажа, когда он идет в обратную сторону
     {
-        if (Input.GetAxis("Horizontal") > 0)
+        if (joystick.Horizontal >= 0.3f)//также проверяется сдвиг стика
             transform.localRotation = Quaternion.Euler(0, 0, 0);
-        if (Input.GetAxis("Horizontal") < 0)
+        if (joystick.Horizontal <= -0.3f)
             transform.localRotation = Quaternion.Euler(0, 180, 0);
     }
 
@@ -99,7 +115,7 @@ public class Player : MonoBehaviour
     }
 
     public void RecountHp(int deltaHp)
-    {
+    {   
         curHp = curHp+deltaHp;
         if (deltaHp < 0 && canHit)
         {
@@ -145,6 +161,10 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Void")
+        {
+            main.Losee();
+        }
         if (collision.gameObject.tag == "Key")//подбор ключа
         {
             Destroy(collision.gameObject);
@@ -165,6 +185,7 @@ public class Player : MonoBehaviour
         {
             Destroy(collision.gameObject);//этот объект уничтожается если игрок входит в коллайдер
             coins++;//на счет игрока начисляется монетка
+            soundEffector.PlayCoinSound();
         }
         if (collision.gameObject.tag == "Heart")//игрок входит в коллайдер сердца
         {
@@ -215,14 +236,14 @@ public class Player : MonoBehaviour
         {
             isClimbing = true;
             rb.bodyType = RigidbodyType2D.Kinematic;
-            if (Input.GetAxis("Vertical") == 0) 
+            if (joystick.Vertical >= 0.3f) //если стик отклоняется вверх то проигрывается анимация карабканья
             {
                 anim.SetInteger("State", 5);
             }
             else
             {
                 anim.SetInteger("State", 6);
-                transform.Translate(Vector3.up * Input.GetAxis("Vertical") * speed * 0.5f * Time.deltaTime); //скорость подъема вверх
+                transform.Translate(Vector3.up * speed * 0.5f * Time.deltaTime); //скорость подъема вверх
             }
         }
         if (collision.gameObject.tag == "Ice")//ждет пока войдем в триггер с тегом Ice

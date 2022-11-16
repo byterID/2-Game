@@ -15,11 +15,15 @@ public class UIControl : MonoBehaviour
     public TimeWork timeWork;
     public float countdown;
     public GameObject inventoryPan;
+    public SoundEffector soundEffector;
+    public AudioSource musicSourсe, soundSourсe;//вводу AudioSource, чтобы брать значение volume и подставлять сохраненное значение
     //свое
-    public GameObject LVLChose, Main, Shop;
+    public GameObject LVLChose, Main, Shop, Settings;
 
     void Start()//А вот это я добавил, потому что при рестарте сцены каким то боком остаются настройки, замораживающие сцену. Теперь при старте сцены, на ней сразу будет установлена нормальная скорость времени.
     {
+        musicSourсe.volume = (float)PlayerPrefs.GetInt("MusicVolume") / 9;//подставляю значение, разделив на 9, тк наш слайдер дает значение от 0 до 9, а AudioSource может принимать только от 0 до 1
+        soundSourсe.volume = (float)PlayerPrefs.GetInt("SoundVolume") / 9;
         Time.timeScale = 1f;
 
         if ((int)timeWork == 2)
@@ -81,6 +85,7 @@ public class UIControl : MonoBehaviour
 
     public void Win()//Победа победа
     {
+        soundEffector.PlayWinSound();
         Time.timeScale = 0f;
         player.enabled = false;
         WinScreen.SetActive(true);
@@ -103,6 +108,7 @@ public class UIControl : MonoBehaviour
         LoseScreen.SetActive(true);//включаю экран смерти муахахах
         inventoryPan.SetActive(false);//скрываю панель с бонусами
         GetComponent<Inventory>().RecountItems();//вызываю компонент
+        soundEffector.PlayLoseSound();
     }
     public void MenuLVL()//ну а это уже на кнопку в самом меню пройгрыша
     {
@@ -122,11 +128,21 @@ public class UIControl : MonoBehaviour
         LVLChose.SetActive(false);//выключает уровни
         Main.SetActive(true);//включает меню
         Shop.SetActive(false);
+        Settings.SetActive(false);
     }
     public void ClickShop()
     {
         Main.SetActive(false);
         Shop.SetActive(true);
+    }
+    public void CliclSettings()
+    {
+        Main.SetActive(false);
+        Settings.SetActive(true);
+    }
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
 

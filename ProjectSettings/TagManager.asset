@@ -19,6 +19,7 @@ TagManager:
   - Lava
   - TimerButtonStart
   - TimerButtonStop
+  - Void
   layers:
   - Default
   - TransparentFX
